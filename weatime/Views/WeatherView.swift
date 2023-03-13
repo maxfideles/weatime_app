@@ -19,7 +19,7 @@ struct WeatherView: View {
                 LinearGradient(colors: [Color(.gray).opacity(0.3),.white], startPoint: .topLeading, endPoint: .bottom)
                 LinearGradient(colors: [Color(.blue).opacity(0.4),Color(.lightGray).opacity(0.3)], startPoint: .bottomLeading, endPoint: .trailing)
                 Circle()
-                    .foregroundColor(Color(.gray).opacity(0.4))
+                    .foregroundColor(Color(.gray).opacity(0.3))
                     .frame(width:300, height:300)
                     .offset(x:-150,y:-150)
                 
