@@ -6,7 +6,7 @@
     "weather": [
         {
             "id": 804,
-            "main": "Thunderstorm",
+            "main": "Clear",
             "description": "overcast clouds",
             "icon": "04d"
         }
@@ -24,6 +24,9 @@
     "wind": {
         "speed": 7.2,
         "deg": 360
+    },
+    "rain": {
+        "3h": 3.16
     },
     "clouds": {
         "all": 100

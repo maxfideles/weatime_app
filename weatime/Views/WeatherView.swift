@@ -120,89 +120,279 @@ struct WeatherView: View {
                 
                 Spacer()
                 
-                HStack{
+                //details
+                VStack {
                     Spacer()
-                    ZStack{
-                        
-                        LinearGradient(colors: [Color(.blue),Color(.white)], startPoint: .topLeading, endPoint: .bottomTrailing)
-                            .cornerRadius(20)
-                            .opacity(0.25)
-                            .shadow(color: .black, radius: 4, x: 3, y: 10)
-                        
-                        VStack{
+                    //minimum and maximum
+                    HStack{
+                        Spacer()
+                        //Minimum
+                        ZStack{
                             
-                            HStack {
-                                Image(systemName: "thermometer.low")
-                                   
-                                Text("Minimum")
-                                    .foregroundColor(.white)
-                                    .frame(maxWidth: .infinity,
-                                           maxHeight: 23,
-                                           alignment: .leading)
+                            LinearGradient(colors: [Color(.blue),Color(.white)], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                .cornerRadius(20)
+                                .opacity(0.25)
+                                .shadow(color: .black, radius: 4, x: 3, y: 10)
+                            
+                            VStack{
+                                
+                                HStack {
+                                    Image(systemName: "thermometer.low")
+                                       
+                                    Text("Minimum")
+                                        .foregroundColor(.white)
+                                        .frame(maxWidth: .infinity,
+                                               maxHeight: 23,
+                                               alignment: .leading)
+                                        
+                                        .bold()
                                     
+                                }
+                                .padding(10)
+                                
+                                HStack{
+                                    VStack{
+                                        //Spacer()
+                                        Text(weather.main.temp_min.roundDouble() + "°")
+                                        //.offset(y:-40)
+                                            .font(.system(size: 30,weight: .semibold))
+                                            .frame(alignment: .center)
+                                    }
+                                }
+                                .frame(maxWidth: .infinity,
+                                       maxHeight: .infinity)
+                            }
+                            
+                            
+                        }
+                        .frame(width: 150,height: 100)
+                        Spacer()
+                        
+                        //Maximum
+                        ZStack{
+                            
+                            LinearGradient(colors: [Color(.blue),Color(.white)], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                .cornerRadius(20)
+                                .opacity(0.25)
+                                .shadow(color: .black, radius: 4, x: 3, y: 10)
+                            
+                            VStack{
+                                
+                                HStack {
+                                    Image(systemName: "thermometer.high")
+                                        //.foregroundColor(.gray)
+                                    Text("Maximum")
+                                        
+                                        .frame(maxWidth: .infinity,
+                                               maxHeight: 23,
+                                               alignment: .leading)
+                                        
                                     .bold()
-                                
-                            }
-                            .padding(10)
-                            
-                            HStack{
-                                VStack{
-                                    //Spacer()
-                                    Text(weather.main.temp_min.roundDouble() + "°")
-                                    //.offset(y:-40)
-                                        .font(.system(size: 30,weight: .semibold))
-                                        .frame(alignment: .center)
+                                    
                                 }
+                                .padding(10)
+                                HStack{
+                                    VStack{
+                                        
+                                        Text(weather.main.temp_max.roundDouble() + "°")
+                                            .font(.system(size: 30,weight: .semibold))
+                                            .frame(alignment: .center)
+                                    }
+                                }
+                                .frame(maxWidth: .infinity,
+                                       maxHeight: .infinity)
                             }
-                            .frame(maxWidth: .infinity,
-                                   maxHeight: .infinity)
+                            
+                            
                         }
-                        
+                        .frame(width: 150,height: 100)
+                        Spacer()
                         
                     }
-                    .frame(width: 150,height: 100)
-                    Spacer()
-                    ZStack{
-                        
-                        LinearGradient(colors: [Color(.blue),Color(.white)], startPoint: .topLeading, endPoint: .bottomTrailing)
-                            .cornerRadius(20)
-                            .opacity(0.25)
-                            .shadow(color: .black, radius: 4, x: 3, y: 10)
-                        
-                        VStack{
-                            
-                            HStack {
-                                Image(systemName: "thermometer.high")
-                                    //.foregroundColor(.gray)
-                                Text("Maximum")
-                                    
-                                    .frame(maxWidth: .infinity,
-                                           maxHeight: 23,
-                                           alignment: .leading)
-                                    
-                                .bold()
-                                
-                            }
-                            .padding(10)
-                            HStack{
-                                VStack{
-                                    
-                                    Text(weather.main.temp_max.roundDouble() + "°")
-                                        .font(.system(size: 30,weight: .semibold))
-                                        .frame(alignment: .center)
-                                }
-                            }
-                            .frame(maxWidth: .infinity,
-                                   maxHeight: .infinity)
-                        }
-                        
-                        
-                    }
-                    .frame(width: 150,height: 100)
-                    Spacer()
+                    .padding(.bottom)
                     
+                  //Feels Like and Humidity
+                    HStack{
+                        Spacer()
+                        
+                        //Feels Like
+                        ZStack{
+                            
+                            LinearGradient(colors: [Color(.blue),Color(.white)], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                .cornerRadius(20)
+                                .opacity(0.25)
+                                .shadow(color: .black, radius: 4, x: 3, y: 10)
+                            
+                            VStack{
+                                //feels like
+                                HStack {
+                                    Image(systemName: "thermometer.medium")
+                                       
+                                    Text("Feels Like")
+                                        .foregroundColor(.white)
+                                        .frame(maxWidth: .infinity,
+                                               maxHeight: 23,
+                                               alignment: .leading)
+                                        
+                                        .bold()
+                                    
+                                }
+                                .padding(10)
+                                
+                                HStack{
+                                    VStack{
+                                        //Spacer()
+                                        Text(weather.main.feels_like.roundDouble() + "°")
+                                        //.offset(y:-40)
+                                            .font(.system(size: 30,weight: .semibold))
+                                            .frame(alignment: .center)
+                                    }
+                                }
+                                .frame(maxWidth: .infinity,
+                                       maxHeight: .infinity)
+                            }
+                            
+                        }
+                        .frame(width: 150,height: 100)
+                        Spacer()
+                        
+                        //Humidity
+                        ZStack{
+                            
+                            LinearGradient(colors: [Color(.blue),Color(.white)], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                .cornerRadius(20)
+                                .opacity(0.25)
+                                .shadow(color: .black, radius: 4, x: 3, y: 10)
+                            
+                            VStack{
+                                
+                                HStack {
+                                    Image(systemName: "humidity")
+                                        
+                                    Text("Humidity")
+                                        
+                                        .frame(maxWidth: .infinity,
+                                               maxHeight: 23,
+                                               alignment: .leading)
+                                        
+                                    .bold()
+                                    
+                                }
+                                .padding(10)
+                                HStack{
+                                    VStack{
+                                        
+                                        Text(weather.main.humidity.roundDouble() + "%")
+                                            .font(.system(size: 30,weight: .semibold))
+                                            .frame(alignment: .center)
+                                    }
+                                }
+                                .frame(maxWidth: .infinity,
+                                       maxHeight: .infinity)
+                            }
+                            
+                            
+                        }
+                        .frame(width: 150,height: 100)
+                        Spacer()
+                        
+                    }
+                    .padding(.bottom)
+                    
+                    //Clouds and Rain volume for the last 3 hours
+                      HStack{
+                          Spacer()
+                          
+                          //Cloudiness
+                          ZStack{
+                              
+                              LinearGradient(colors: [Color(.blue),Color(.white)], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                  .cornerRadius(20)
+                                  .opacity(0.25)
+                                  .shadow(color: .black, radius: 4, x: 3, y: 10)
+                              
+                              VStack{
+                                  
+                                  HStack {
+                                      Image(systemName: "cloud.fill")
+                                         
+                                      Text("Cloudiness")
+                                          .foregroundColor(.white)
+                                          .frame(maxWidth: .infinity,
+                                                 maxHeight: 23,
+                                                 alignment: .leading)
+                                          
+                                          .bold()
+                                      
+                                  }
+                                  .padding(10)
+                                  
+                                  HStack{
+                                      VStack{
+                                          //Spacer()
+                                          Text(weather.clouds.all.roundDouble() + "%")
+                                            .font(.system(size: 30,weight: .semibold))
+                                             .frame(alignment: .center)
+                                      }
+                                  }
+                                  .frame(maxWidth: .infinity,
+                                         maxHeight: .infinity)
+                              }
+                              
+                          }
+                          .frame(width: 150,height: 100)
+                          Spacer()
+                          
+                          //Wind Speed
+                          ZStack{
+                              
+                              LinearGradient(colors: [Color(.blue),Color(.white)], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                  .cornerRadius(20)
+                                  .opacity(0.25)
+                                  .shadow(color: .black, radius: 4, x: 3, y: 10)
+                              
+                              VStack{
+                                  
+                                  HStack {
+                                      Image(systemName: "wind")
+                                          
+                                      Text("Wind Speed")
+                                          
+                                          .frame(maxWidth: .infinity,
+                                                 maxHeight: 23,
+                                                 alignment: .leading)
+                                          
+                                      .bold()
+                                      
+                                  }
+                                  .padding(10)
+                                  HStack{
+                                      VStack{
+                                          
+                                          Text(weather.wind.speed.roundDouble() + " m/s")
+                                              .font(.system(size: 30,weight: .semibold))
+                                              .frame(alignment: .center)
+                                      }
+                                  }
+                                  .frame(maxWidth: .infinity,
+                                         maxHeight: .infinity)
+                              }
+                              
+                              
+                          }
+                          .frame(width: 150,height: 100)
+                          Spacer()
+                          
+                      }
+                      .padding(.bottom)
+
+                    
+                    
+                    
+                    
+                    Spacer()
                 }
-                
+                .frame(width: 350, height: 350)
                 Spacer()
                 
             }
