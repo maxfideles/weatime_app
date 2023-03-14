@@ -27,6 +27,7 @@ In case to use a simulator, it's necessary to set the latitude and longitude to 
 
 
 ##Icon credits
+
 All icons used on this project were from Flaticon: [Summertime Collection](https://www.flaticon.com/free-icons/summertime) and [Thunderstorm Icon](https://www.flaticon.com/free-icons/thunder)
 
 Here is my sincere thank you to Flaticon!
