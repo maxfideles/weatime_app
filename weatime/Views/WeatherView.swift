@@ -31,7 +31,39 @@ struct WeatherView: View {
                     .blur(radius: 5)
                 
                 
+        }else if (weather.weather[0].main == "Snow"){
+            
+            LinearGradient(colors: [.blue,.white], startPoint: .top, endPoint: .trailing)
+                .blur(radius: 10)
+            LinearGradient(colors: [Color(.blue).opacity(0.5),Color(.white).opacity(0.3)], startPoint: .bottomLeading, endPoint: .trailing)
+                .blur(radius: 5)
+            
+            
+            VStack {
+                Image("snow")
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                    .offset(x:-34,y:-40)
+                .opacity(0.3)
+                Image("snow")
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                    .offset(x:30,y:58)
+                .opacity(0.3)
+                Image("snow")
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                    .offset(x: -87, y: 92)
+                .opacity(0.3)
+                Image("snow")
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                    .offset(x: 93, y: 180)
+                .opacity(0.3)
             }
+            
+            
+        }
             
             else{
                 LinearGradient(colors: [.blue,.white], startPoint: .top, endPoint: .trailing)
@@ -95,6 +127,11 @@ struct WeatherView: View {
                                     .offset()
                             }else if (weather.weather[0].main == "Mist"){
                                 Image("mist")
+                                    .resizable()
+                                    .frame(width: 80, height: 80)
+                                    .offset()
+                            }else if (weather.weather[0].main == "Snow"){
+                                Image("snow")
                                     .resizable()
                                     .frame(width: 80, height: 80)
                                     .offset()
