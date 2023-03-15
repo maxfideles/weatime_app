@@ -1,8 +1,23 @@
 # weatime_app
 
 
-
-
+<table>
+<tr >
+  <td>Clear</td>
+  <td style="text-align: center">Clouds</td>
+  <td style="text-align: center">Mist</td>
+</tr>
+<tr>
+  <td><img width="200" alt="Clear" src="https://user-images.githubusercontent.com/61297641/225186331-c1ff2976-81db-4bcb-98c2-dde2b96100f4.png"></td>
+  <td><img width="200" alt="Clouds" src="https://user-images.githubusercontent.com/61297641/225186355-e85fbb11-78da-436d-afe0-ed9ef81e4eeb.png"></td>
+  <td><img width="200" alt="Mist" src="https://user-images.githubusercontent.com/61297641/225186361-8f8725a7-837b-41ea-8d10-0c00620179ca.png"></td>
+</tr>
+<tr>
+  <td><img width="200" alt="snow" src="https://user-images.githubusercontent.com/61297641/225186363-60b44efb-8445-4dfc-9075-ef2c69db580a.png"></td>
+  <td><img width="200" alt="Rain" src="https://user-images.githubusercontent.com/61297641/225186372-cfe8e1a9-40aa-4cb9-8e87-b331127654c7.png"></td>
+  <td><img width="200" alt="Thunderstorm" src="https://user-images.githubusercontent.com/61297641/225186368-3a20aa3f-fbf8-43a8-b297-688553b99860.png"></td>
+</tr>
+</table>
 
 
 
