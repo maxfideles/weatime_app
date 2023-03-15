@@ -2,7 +2,7 @@
 
 
 <table>
-<tr >
+<tr>
   <td>Clear</td>
   <td style="text-align: center">Clouds</td>
   <td style="text-align: center">Mist</td>
@@ -11,6 +11,11 @@
   <td><img width="200" alt="Clear" src="https://user-images.githubusercontent.com/61297641/225186331-c1ff2976-81db-4bcb-98c2-dde2b96100f4.png"></td>
   <td><img width="200" alt="Clouds" src="https://user-images.githubusercontent.com/61297641/225186355-e85fbb11-78da-436d-afe0-ed9ef81e4eeb.png"></td>
   <td><img width="200" alt="Mist" src="https://user-images.githubusercontent.com/61297641/225186361-8f8725a7-837b-41ea-8d10-0c00620179ca.png"></td>
+</tr>
+<tr>
+  <td>Snow</td>
+  <td style="text-align: center">Rain</td>
+  <td style="text-align: center">Thunderstorm</td>
 </tr>
 <tr>
   <td><img width="200" alt="snow" src="https://user-images.githubusercontent.com/61297641/225186363-60b44efb-8445-4dfc-9075-ef2c69db580a.png"></td>
